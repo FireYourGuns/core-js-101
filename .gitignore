@@ -39,3 +39,4 @@ node_modules
 
 JStest.html
 JStest.js
+.eslintignore
