@@ -174,8 +174,14 @@ function partialUsingArguments(/* fn, ...args1 */) {
  *   getId4() => 7
  *   getId10() => 11
  */
-function getIdGeneratorFunction(/* startFrom */) {
-  throw new Error('Not implemented');
+function getIdGeneratorFunction(startFrom) {
+  let count = startFrom;
+  // eslint-disable-next-line func-names
+  const fun = function () {
+    count += 1;
+    return count - 1;
+  };
+  return fun;
 }
 
 
