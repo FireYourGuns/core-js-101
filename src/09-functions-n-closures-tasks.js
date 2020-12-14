@@ -44,8 +44,13 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  // eslint-disable-next-line func-names
+  const fun = function (el) {
+    // eslint-disable-next-line no-restricted-properties
+    return Math.pow(el, exponent);
+  };
+  return fun;
 }
 
 
