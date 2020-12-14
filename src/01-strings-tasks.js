@@ -99,8 +99,9 @@ function getFirstChar(value) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  const regex = new RegExp(/^\s*|\s$/, 'g');
+  return value.replace(regex, '');
 }
 
 /**
